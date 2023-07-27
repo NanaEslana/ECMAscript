@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Maps percorre a array e faz alguma coisa com ela.
+        let numeros = [1,2,3];
+        let dobro = numeros.map(function(numeros){
+             return numeros * 2;
+        })
+
+        console.log(dobro);
+
+        // Percorre todos os elementos dentro de uma array.
+        let nomes = ['Eslana','Regina','Silva'];
+        let canais = ['SBT','Globo','Record']
+        
+        nomes.forEach(function(nomes){
+             console.log(nomes);
+        })
+
+        canais.forEach(function(canais){
+              console.log(canais);
+        })  
+
+        //Filtra elementos de uma array conforme de acordo com determinada condição.
+        let alunos =[
+            {nome:'Joao', idade: 15},
+            {nome: 'Maria', idade: 18},
+            {nome: 'Jose',idade: 20},
+            {nome: 'Tulio',idade: 17}
+        ];
+
+        let alunosDeMaior = alunos.filter(function(alunos){
+             return alunos.idade >= 18; //Filtra a array e ver quem tem idade maior ou igual a 18 anos
+        })
+        console.log(alunosDeMaior);
+
+        //Find é ultilizado quando precisamos encontrar um indice expecifico em uma array.
+            let alunos =[
+                 {nome:'Joao', idade: 15},
+                 {nome: 'Maria', idade: 18},
+                 {nome: 'Jose',idade: 20},
+                 {nome: 'Tulio',idade: 17}
+            ];
+
+            let alunosProcurado = alunos.find(function(alunos){
+                 return alunos.nome === 'Jose'; //retorna nome do aluno identico a "Jose"
+            })
+
+            console.log(alunosProcurado);
+
+        //every ele verificar se todos os itens da array respeita um certo criterio.
+        let jogos =[
+             {nome: 'GTA V', categoria: 'Ação'},
+             {nome: 'Gran Turista', categoria: 'corrida'},
+             {nome: 'Need Forer', categoria: 'corrida'},
+             {nome:'Mario Kart Bros', categoria: 'corrida'},
+             {nome: 'forza', categoria: 'corrida'}
+
+        ]
+        //todos sãojogos de corrida? returna true ou false
+
+            let todosJogos = jogos.every(function(jogos){
+             return jogos.categoria === 'corrida';
+            })
+
+            console.log(todosJogos);
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -72,9 +72,50 @@
 
             console.log(todosJogos);
 
+            //Some verificar se pelo menos um item socilitado aparece pelo menos uma vez.
+               let jogos =[
+                    {nome: 'GTA V', categoria: 'Ação'},
+                    {nome: 'Gran Turista', categoria: 'Plataforma'},
+                    {nome: 'Need Forer', categoria: 'aventura'},
+                    {nome:'Mario Kart Bros', categoria: 'short'},
+                    {nome: 'forza', categoria: 'corrida'}
+
+               ]
+
+           //aparece pelo menos uma vez jogos de corrida? returna true ou false
+
+               let todosJogos = jogos.some(function(jogos){
+                    return jogos.categoria === 'corrida';
+               })
+
+               console.log("Tem jogo de corrida?" + todosJogos);
+
+          //reduce é utilizado para quando precisamos pegar ums valores de uma array e condesar eles em um unico valor.
+
+          let numeros = [1,2,3,4,5];
+
+          //como faço para obter a soma de todos os numeros?
+
+          let soma = numeros.reduce(function(soma,numeros){
+                return soma + numeros;
+          },0)
+
+          console.log(soma);
 
 
+          let alunos =  [
+                {nome: 'Jose', idade: 10},
+                {nome: ' Maria', idade: 20},
+                {nome: 'Joao', idade: 30}
+          ]
 
+                    //Como coletar somente nomes?
+
+          let nomes = alunos.reduce(function(arrayNomes,aluno){
+                arrayNomes.push(aluno.nome); //Pega so os nomes.
+               return arrayNomes;
+          },[])
+          console.log(nomes);
 
     </script>
     
